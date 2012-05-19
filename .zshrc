@@ -1,6 +1,8 @@
 export LANG=ja_JP.UTF-8
 export LC_ALL=ja_JP.UTF-8 #for mac
 
+UNAME=`uname`
+
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=100000
@@ -44,8 +46,12 @@ RPROMPT='%{$fg[white]%}%~%{$fg[blue]%}:%{$fg[white]%}%!%{$reset_color%}'
 # Aliases
 
 alias sl='ls'
-alias ls='ls --color'
-alias ll='l -l'
+if [ $UNAME = "Darwin" ]; then
+	alias ls='ls -G'
+elif [ $UNAME = "Linux" ]; then
+	alias ls='ls --color'
+fi
+alias ll='ls -l'
 alias la='ls -a'
 
 alias findgrep='find . -type f | xargs grep '
