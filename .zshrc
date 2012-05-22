@@ -1,7 +1,9 @@
-export LANG=ja_JP.UTF-8
-export LC_ALL=ja_JP.UTF-8 #for mac
-
 UNAME=`uname`
+export LANG=ja_JP.UTF-8
+
+if [ $UNAME = "Darwin" ]; then
+  export LC_ALL=ja_JP.UTF-8 #for mac
+fi
 
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
