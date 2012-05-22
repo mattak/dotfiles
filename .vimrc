@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler'
+Bundle 'Shougo/neocomplcache'
 
 """
 

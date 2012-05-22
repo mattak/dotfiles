@@ -58,5 +58,6 @@ alias findgrep='find . -type f | xargs grep '
 # PATHES
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source $HOME/.profile
 
 # Execute
