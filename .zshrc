@@ -1,4 +1,8 @@
 UNAME=`uname`
+if [ $UNAME = "Linux" ]; then
+  UNAME=`uname -a | perl -ne 'print "$1" if /(Ubuntu)/;'`
+fi
+
 export LANG=ja_JP.UTF-8
 
 if [ $UNAME = "Darwin" ]; then
