@@ -57,7 +57,7 @@ RPROMPT='%{$fg[white]%}%~%{$fg[blue]%}:%{$fg[white]%}%!%{$reset_color%}'
 alias sl='ls'
 if [ "Darwin" = $UNAME ]; then
 	alias ls='ls -G'
-elif [ $UNAME = "Linux" ]; then
+else
 	alias ls='ls --color'
 fi
 alias ll='ls -l'
