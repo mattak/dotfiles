@@ -24,3 +24,12 @@ colorscheme pyte
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
+set encoding=utf8
+set fileencodings=utf-8,iso-2022-jp,cp932
+
+" pytnon setting
+autocmd FileType python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl tabstop=4 expandtab shiftwidth=4 softtabstop=4
+
+
