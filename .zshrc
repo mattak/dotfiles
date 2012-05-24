@@ -1,11 +1,14 @@
 UNAME=`uname`
-if [ $UNAME = "Linux" ]; then
-  UNAME=`uname -a | perl -ne 'print "$1" if /(Ubuntu)/;'`
+if [ "Linux" = $UNAME ]; then
+  UNAME_UBUNTU=`uname -a | perl -ne 'print "$1" if /(Ubuntu)/;'`
+  if [ ${#UNAME_UBUNTU} -ne 0 ]; then
+    UNAME=$UNAME_UBUNTU
+  fi
 fi
 
 export LANG=ja_JP.UTF-8
 
-if [ $UNAME = "Darwin" ]; then
+if [ "Darwin" = $UNAME ]; then
   export LC_ALL=ja_JP.UTF-8 #for mac
 fi
 
@@ -52,7 +55,7 @@ RPROMPT='%{$fg[white]%}%~%{$fg[blue]%}:%{$fg[white]%}%!%{$reset_color%}'
 # Aliases
 
 alias sl='ls'
-if [ $UNAME = "Darwin" ]; then
+if [ "Darwin" = $UNAME ]; then
 	alias ls='ls -G'
 elif [ $UNAME = "Linux" ]; then
 	alias ls='ls --color'
