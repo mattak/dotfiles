@@ -29,27 +29,36 @@ setopt auto_cd
 setopt prompt_subst
 #PROMPT='`whoami`@$HOST${WINDOW:+"[$WINDOW]"}%{$fg[blue]%}%#%{$reset_color%} '
 
-PROMPT_NUM=`expr $RANDOM % 8`
-if [ $PROMPT_NUM -eq 0 ]; then
-  PROMPT='(」・ω・)」'
-elif [ $PROMPT_NUM -eq 1 ]; then
-  PROMPT='(^^;'
-elif [ $PROMPT_NUM -eq 2 ]; then
-  PROMPT='( ´∀｀)σσ'
-elif [ $PROMPT_NUM -eq 3 ]; then
-  PROMPT='(´ー｀)y~~'
-elif [ $PROMPT_NUM -eq 4 ]; then
-  PROMPT='(｀・ω・´)'
-elif [ $PROMPT_NUM -eq 5 ]; then
-  PROMPT='(´・ω・｀)'
-elif [ $PROMPT_NUM -eq 6 ]; then
-  PROMPT='ｷﾀー(ﾟ∀ ﾟ)ー!'
-elif [ $PROMPT_NUM -eq 7 ]; then
-  PROMPT='(*´ω｀*)'
-else
-  PROMPT='(^^)'
-fi
-PROMPT="$PROMPT % "
+fun_prompt() {
+    PROMPT_NUM=`expr $RANDOM % 8`
+    if [ $PROMPT_NUM -eq 0 ]; then
+	PROMPT='(」・ω・)」'
+    elif [ $PROMPT_NUM -eq 1 ]; then
+	PROMPT='(^^;'
+    elif [ $PROMPT_NUM -eq 2 ]; then
+	PROMPT='( ´∀｀)σσ'
+    elif [ $PROMPT_NUM -eq 3 ]; then
+	PROMPT='(´ー｀)y~~'
+    elif [ $PROMPT_NUM -eq 4 ]; then
+	PROMPT='(｀・ω・´)'
+    elif [ $PROMPT_NUM -eq 5 ]; then
+	PROMPT='(´・ω・｀)'
+    elif [ $PROMPT_NUM -eq 6 ]; then
+	PROMPT='ｷﾀー(ﾟ∀ ﾟ)ー!'
+    elif [ $PROMPT_NUM -eq 7 ]; then
+	PROMPT='(*´ω｀*)'
+    else
+	PROMPT='(^^)'
+    fi
+    PROMPT="$PROMPT % "
+}
+
+normal_prompt () {
+    PROMPT='%{${fg[blue]}%}[%n@%m] %(!.%.$) %{${reset_color}%} %#'
+}
+
+normal_prompt
+
 RPROMPT='%{$fg[white]%}%~%{$fg[blue]%}:%{$fg[white]%}%!%{$reset_color%}'
 
 # Aliases
