@@ -27,9 +27,14 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 set encoding=utf8
 set fileencodings=utf-8,iso-2022-jp,cp932
 
+setl autoindent
+setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
 " pytnon setting
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=4 expandtab shiftwidth=4 softtabstop=4
 
+" backspace
+set backspace=indent,eol,start
 
