@@ -14,6 +14,7 @@ Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
 Bundle 'therubymug/vim-pyte'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
 
 """
 
