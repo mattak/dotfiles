@@ -13,6 +13,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
 Bundle 'therubymug/vim-pyte'
+Bundle 'tpope/vim-fugitive'
 
 """
 
@@ -26,6 +27,8 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 
 set encoding=utf8
 set fileencodings=utf-8,iso-2022-jp,cp932
+
+set number
 
 setl autoindent
 setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
