@@ -6,10 +6,12 @@ if [ "Linux" = $UNAME ]; then
   fi
 fi
 
-export LANG=ja_JP.UTF-8
+if [ "Ubuntu" != $UNAME ]; then
+    export LANG=ja_JP.UTF-8
+fi
 
 if [ "Darwin" = $UNAME ]; then
-  export LC_ALL=ja_JP.UTF-8 #for mac
+    export LC_ALL=ja_JP.UTF-8 #for mac
 fi
 
 HISTFILE=$HOME/.zsh-history
