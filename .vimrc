@@ -34,6 +34,10 @@ set number
 set autoindent
 set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
+" ruby setting
+autocmd FileType ruby setl autoindent
+autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
 " pytnon setting
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
