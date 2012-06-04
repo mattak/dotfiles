@@ -31,8 +31,8 @@ set fileencodings=utf-8,iso-2022-jp,cp932
 
 set number
 
-setl autoindent
-setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+set autoindent
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " pytnon setting
 autocmd FileType python setl autoindent
