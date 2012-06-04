@@ -72,7 +72,20 @@ fi
 alias ll='ls -l'
 alias la='ls -a'
 
-alias findgrep='find . -type f | xargs grep '
+# Funcs
+
+findgrep() {
+  folder=$1
+  shift 1
+  find $folder -type f | grep $@
+}
+
+findxgrep() {
+  folder=$1
+  shift 1
+  find $folder -type f | xargs grep $@
+}
+
 # PATHES
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

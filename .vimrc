@@ -14,6 +14,7 @@ Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
 Bundle 'therubymug/vim-pyte'
 Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
 
 """
 
@@ -30,12 +31,18 @@ set fileencodings=utf-8,iso-2022-jp,cp932
 
 set number
 
+set autoindent
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+" ruby setting
+autocmd FileType ruby setl autoindent
+autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
 " pytnon setting
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=4 expandtab shiftwidth=4 softtabstop=4
 
-" ruby setting
-autocmd FileType ruby setl autoindent
-autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+" backspace
+set backspace=indent,eol,start
 
