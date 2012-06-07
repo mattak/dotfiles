@@ -49,3 +49,9 @@ autocmd FileType python setl tabstop=4 expandtab shiftwidth=4 softtabstop=4
 " backspace
 set backspace=indent,eol,start
 
+" key mapping
+nnoremap <silent> tf :<C-u>tabfirst<CR>
+nnoremap <silent> tl :<C-u>tablast<CR>
+nnoremap <silent> tn :<C-u>tabnext<CR>
+nnoremap <silent> tp :<C-u>tabprevious<CR>
+
