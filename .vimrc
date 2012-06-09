@@ -46,6 +46,10 @@ autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=4 expandtab shiftwidth=4 softtabstop=4
 
+" rst setting
+autocmd FileType rst setl autoindent
+autocmd FileType rst setl expandtab tabstop=3 shiftwidth=3 softtabstop=3
+
 " backspace
 set backspace=indent,eol,start
 
