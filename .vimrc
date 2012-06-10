@@ -9,6 +9,9 @@ Bundle 'gmarik/vundle'
 """my plugins
 
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'AutoClose'
+Bundle 'mattn/zencoding-vim'
+Bundle 'opslorer'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
