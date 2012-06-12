@@ -73,6 +73,7 @@ else
 fi
 alias ll='ls -l'
 alias la='ls -a'
+alias vi='vim'
 
 # Funcs
 
