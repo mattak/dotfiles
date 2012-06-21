@@ -8,16 +8,18 @@ Bundle 'gmarik/vundle'
 
 """my plugins
 
-Bundle 'vim-ruby/vim-ruby'
 Bundle 'AutoClose'
-Bundle 'mattn/zencoding-vim'
+Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'opsplorer'
+Bundle 'mattn/zencoding-vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
+Bundle 'scrooloose/nerdtree'
 Bundle 'therubymug/vim-pyte'
 Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-ruby/vim-ruby'
 
 """
 
@@ -44,6 +46,8 @@ function InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
+" nerdtree
+autocmd vimenter * if !argc() | NERDTree | endif
 
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
