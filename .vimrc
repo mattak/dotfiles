@@ -17,6 +17,7 @@ Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/neocomplcache'
 Bundle 'scrooloose/nerdtree'
 Bundle 'therubymug/vim-pyte'
+Bundle 'thinca/vim-quickrun'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-ruby/vim-ruby'
@@ -81,4 +82,6 @@ nnoremap <silent> tf :<C-u>tabfirst<CR>
 nnoremap <silent> tl :<C-u>tablast<CR>
 nnoremap <silent> tn :<C-u>tabnext<CR>
 nnoremap <silent> tp :<C-u>tabprevious<CR>
-
+nmap <silent> ;  <C-w>p
+nnoremap <silent> QQ  :QuickRun
+nmap <silent> QS  :!touch index.rst; make html<CR>

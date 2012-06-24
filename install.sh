@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ $1 = "r" ]; then
-	for dotfile in .emacs .emacs.d .vim .vimrc .zshrc
+	for dotfile in .emacs .emacs.d .vim .vimrc .zshrc .zshenv
 	do
 		rm $HOME/$dotfile -Rf
 	done
@@ -14,4 +14,4 @@ do
 	then
 		ln -Fis "$PWD/$dotfile" $HOME
 	fi
-done	
+done
