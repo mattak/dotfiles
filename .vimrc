@@ -74,6 +74,10 @@ autocmd FileType python setl tabstop=4 expandtab shiftwidth=4 softtabstop=4
 autocmd FileType rst setl autoindent
 autocmd FileType rst setl expandtab tabstop=3 shiftwidth=3 softtabstop=3
 
+" clojure setting
+autocmd FileType clj setl autoindent
+autocmd FileType clj setl expandtab tabstop=3 shiftwidth=3 softtabstop=3
+
 " backspace
 set backspace=indent,eol,start
 
