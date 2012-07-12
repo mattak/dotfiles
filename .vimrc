@@ -81,6 +81,10 @@ autocmd FileType clj setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 " backspace
 set backspace=indent,eol,start
 
+" functions ...
+let g:nerdtree_tabs_open_on_console_startup=1
+
+
 " key mapping
 nnoremap <silent> tf :<C-u>tabfirst<CR>
 nnoremap <silent> tl :<C-u>tablast<CR>
@@ -89,3 +93,6 @@ nnoremap <silent> tp :<C-u>tabprevious<CR>
 nmap <silent> ;  <C-w>p
 nnoremap <silent> QQ  :QuickRun
 nmap <silent> QS  :!touch index.rst; make html<CR>
+noremap <C-e> :<C-u>NERDTreeToggle<CR>
+"map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
