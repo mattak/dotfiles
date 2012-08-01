@@ -1,27 +1,27 @@
 set nocompatible
 filetype off
+filetype plugin indent off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
+if has('vim_starting')
+    set rtp+=~/.vim/bundle/neobundle.vim/
+    call neobundle#rc(expand('~/.vim/bundle'))
+endif
 
 """my plugins
 
-Bundle 'AutoClose'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'opsplorer'
-Bundle 'mattn/zencoding-vim'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimfiler'
-Bundle 'Shougo/neocomplcache'
-Bundle 'scrooloose/nerdtree'
-Bundle 'therubymug/vim-pyte'
-Bundle 'thinca/vim-quickrun'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/VimClojure'
+NeoBundle 'AutoClose'
+NeoBundle 'jistr/vim-nerdtree-tabs'
+NeoBundle 'opsplorer'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'therubymug/vim-pyte'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-ruby/vim-ruby'
 
 """
 
@@ -82,6 +82,10 @@ autocmd FileType clojure setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 " backspace
 set backspace=indent,eol,start
 
+" functions ...
+let g:nerdtree_tabs_open_on_console_startup=1
+
+
 " key mapping
 nnoremap <silent> tf :<C-u>tabfirst<CR>
 nnoremap <silent> tl :<C-u>tablast<CR>
@@ -90,3 +94,6 @@ nnoremap <silent> tp :<C-u>tabprevious<CR>
 nmap <silent> ;  <C-w>p
 nnoremap <silent> QQ  :QuickRun
 nmap <silent> QS  :!touch index.rst; make html<CR>
+noremap <C-e> :<C-u>NERDTreeToggle<CR>
+"map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
