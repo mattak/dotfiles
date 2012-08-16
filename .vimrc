@@ -62,6 +62,9 @@ set number
 set autoindent
 set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
+" file type style 
+"--------------------------
+
 " ruby setting
 autocmd FileType ruby setl autoindent
 autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
@@ -79,12 +82,26 @@ autocmd FileType rst setl expandtab tabstop=3 shiftwidth=3 softtabstop=3
 autocmd FileType clojure setl autoindent
 autocmd FileType clojure setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
+" html setting
+autocmd FileType html setl autoindent
+autocmd FileType html setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+" css setting
+autocmd FileType css setl autoindent
+autocmd FileType css setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+" sass, scss
+"au BufNewFile,BufRead *.scss set filetype=sass
+autocmd FileType scss setl autoindent
+autocmd FileType scss setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+
+
 " backspace
 set backspace=indent,eol,start
 
 " functions ...
 let g:nerdtree_tabs_open_on_console_startup=1
-
 
 " key mapping
 nnoremap <silent> tf :<C-u>tabfirst<CR>
