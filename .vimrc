@@ -76,8 +76,8 @@ autocmd FileType rst setl autoindent
 autocmd FileType rst setl expandtab tabstop=3 shiftwidth=3 softtabstop=3
 
 " clojure setting
-autocmd FileType clj setl autoindent
-autocmd FileType clj setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType clojure setl autoindent
+autocmd FileType clojure setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " backspace
 set backspace=indent,eol,start
