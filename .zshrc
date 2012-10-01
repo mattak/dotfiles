@@ -87,10 +87,10 @@ precmd () {
     elif [[ -n `echo "$st" | grep "Conflict"` ]]; then
         color=${fg[red]}
     elif [[ -n `echo "$st" | grep "^# Changes to be committed"` ]]; then
+        color=${fg[red]}
+    elif [[ -n `echo "$st" | grep "^# Changes not staged"` ]]; then
         color=${fg[yellow]}
     elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
-        color=${fg[yellow]}
-    elif [[ -n `echo "$st" | grep "^# Changes not staged"` ]]; then
         color=${fg[blue]}
     elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
         color=${fg[blue]}
