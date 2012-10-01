@@ -61,7 +61,49 @@ normal_prompt () {
 
 normal_prompt
 
-RPROMPT='%{$fg[white]%}%~%{$fg[blue]%}:%{$fg[white]%}%!%{$reset_color%}'
+# git setting
+#autoload -Uz vcs_info
+#zstyle ':vcs_info:*' formats '[%s][%b]'
+#zstyle ':vcs_info:*' actionformats '[%s][%b|%a]'
+#
+#tmp_precmd () {
+#    #LANG=ja_JP.UTF-8 vcs_info
+#    LANG=en_US.UTF-8 vcs_info
+#    RPROMPT="%{$fg[white]%}%~%{$fg[blue]%}:%{$fg[white]%}%!%{$reset_color%} ${vcs_info_msg_0_}"
+#}
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:*' actionformats '[%b][%a]'
+
+precmd () {
+    psvar=()
+    #LANG=en_US.UTF-8 vcs_info
+    LANG=ja_JP.UTF-8 vcs_info
+
+    st=`git status 2> /dev/null`
+    if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
+        color=${fg[green]}
+    elif [[ -n `echo "$st" | grep "Conflict"` ]]; then
+        color=${fg[red]}
+    elif [[ -n `echo "$st" | grep "^# Changes to be committed"` ]]; then
+        color=${fg[red]}
+    elif [[ -n `echo "$st" | grep "^# Changes not staged"` ]]; then
+        color=${fg[yellow]}
+    elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
+        color=${fg[blue]}
+    elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
+        color=${fg[blue]}
+    else
+        color=${fg[red]}
+    fi
+
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]=" $vcs_info_msg_0_"
+
+    RPROMPT="%{$fg[white]%}%~%{$reset_color%}%{$color%}%1v%{$reset_color%}"
+}
+
+#RPROMPT="%{$fg[white]%}%~%{$fg[blue]%} %1(v|%F{green}%1v%f|)"
 
 # Aliases
 
