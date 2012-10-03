@@ -62,15 +62,6 @@ normal_prompt () {
 normal_prompt
 
 # git setting
-#autoload -Uz vcs_info
-#zstyle ':vcs_info:*' formats '[%s][%b]'
-#zstyle ':vcs_info:*' actionformats '[%s][%b|%a]'
-#
-#tmp_precmd () {
-#    #LANG=ja_JP.UTF-8 vcs_info
-#    LANG=en_US.UTF-8 vcs_info
-#    RPROMPT="%{$fg[white]%}%~%{$fg[blue]%}:%{$fg[white]%}%!%{$reset_color%} ${vcs_info_msg_0_}"
-#}
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '[%b]'
@@ -78,8 +69,8 @@ zstyle ':vcs_info:*' actionformats '[%b][%a]'
 
 precmd () {
     psvar=()
-    #LANG=en_US.UTF-8 vcs_info
-    LANG=ja_JP.UTF-8 vcs_info
+    LANG=en_US.UTF-8 vcs_info
+    #LANG=ja_JP.UTF-8 vcs_info
 
     st=`git status 2> /dev/null`
     if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
