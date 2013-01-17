@@ -17,12 +17,12 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
-
 """
 
 filetype plugin indent on
@@ -51,6 +51,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " nerdtree
 autocmd vimenter * if !argc() | NERDTree | endif
 
+" setting
 set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
@@ -61,6 +62,8 @@ set number
 
 set autoindent
 set expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+set ambiwidth=double
 
 " file type style 
 "--------------------------
