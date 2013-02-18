@@ -2,7 +2,7 @@
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/src/android-sdks/tools:$PATH"
 export PATH="$HOME/src/android-sdks/platform-tools:$PATH"
-
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # vars
 ANDROID_HOME="$HOME/src/android-sdks"
@@ -12,3 +12,4 @@ alias perlcw="git status --short | grep -v '\.pm\.swp' | grep -v ' D ' | grep -o
 
 # rbenv
 eval "$(rbenv init -)"
+
