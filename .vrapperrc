@@ -1,0 +1,13 @@
+
+" スクロール
+noremap <Space>j <C-f>
+noremap <Space>k <C-b>
+
+" タブの切替
+noremap tn :bn<CR>
+noremap tp :bp<CR>
+
+" srで参照をプロジェクトから検索
+eclipseaction SearchRef org.eclipse.jdt.ui.edit.text.java.search.references.in.project
+noremap sr :SearchRef<C-m>
+
