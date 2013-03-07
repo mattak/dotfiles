@@ -8,7 +8,7 @@ if has('vim_starting')
 endif
 
 """my plugins
-
+NeoBundle 'akiomik/vim-gitgutter'
 NeoBundle 'AutoClose'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'opsplorer'
