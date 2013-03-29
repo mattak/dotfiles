@@ -17,7 +17,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/syntastic'
+"""NeoBundle 'scrooloose/syntastic'
 NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tomtom/tcomment_vim'
@@ -62,7 +62,7 @@ set fileencodings=utf-8,iso-2022-jp,cp932
 set number
 
 set autoindent
-set expandtab tabstop=4 shiftwidth=4 softtabstop=4
+set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 set ambiwidth=double
 
@@ -99,6 +99,13 @@ autocmd FileType css setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType scss setl autoindent
 autocmd FileType scss setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
+" js
+autocmd FileType js setl autoindent
+autocmd FileType js setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+" coffee
+autocmd FileType coffee setl autoindent
+autocmd FileType coffee setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " backspace
 set backspace=indent,eol,start
