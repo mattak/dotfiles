@@ -1,17 +1,18 @@
 #!/bin/sh
-if [ $1 = "r" ]; then
-	for dotfile in .emacs .emacs.d .vim .vimrc .zshrc .zshenv
+DOTFILES=`ls -a | egrep '^\.' | egrep -v '^.$' | egrep -v '^..$' | egrep -v '^.git'` 
+
+if [ "$1" = "r" ]; then
+	for dotfile in $DOTFILES
 	do
-		rm $HOME/$dotfile -Rf
+		rm -f $HOME/$dotfile
 	done
 fi
 
-echo $0
-cd $(dirname $0)
-for dotfile in .?*
+cd `dirname $0`
+PWD=`PWD`
+
+for dotfile in $DOTFILES
 do
-	if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
-	then
-		ln -Fis "$PWD/$dotfile" $HOME
-	fi
+	ln -Fs "$PWD/$dotfile" $HOME
 done
+

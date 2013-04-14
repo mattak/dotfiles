@@ -1,0 +1,10 @@
+# apkdump
+bist install 5337300
+
+# ljust
+bist install 5333258
+
+# ashot
+bist install 5099636
+
+bist rehash
