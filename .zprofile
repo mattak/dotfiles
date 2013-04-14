@@ -1,2 +1,5 @@
+# home bin
+export PATH=$PATH:$HOME/bin
+
 # bist 
-export PATH=$PATH:/Users/mattak/.bist/bin
+export PATH=$PATH:$HOME/.bist/bin
