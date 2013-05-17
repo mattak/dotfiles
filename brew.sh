@@ -19,3 +19,10 @@ fi
 
 # rbenv
 
+# gvm
+
+which gvm > /dev/null
+if [ $? -eq 1 ]; then
+  curl -s get.gvmtool.net | bash
+fi
+

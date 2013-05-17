@@ -6,3 +6,6 @@ export PATH=$PATH:$HOME/.bist/bin
 
 # rbenv
 eval "$(rbenv init -)"
+
+# gvm
+source "$HOME/.gvm/bin/gvm-init.sh"
