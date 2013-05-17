@@ -127,3 +127,6 @@ findxgrep() {
 source $HOME/.profile
 
 # Execute
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/maruyama/.gvm/bin/gvm-init.sh" ]] && source "/Users/maruyama/.gvm/bin/gvm-init.sh"
