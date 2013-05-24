@@ -62,7 +62,7 @@ set fileencodings=utf-8,iso-2022-jp,cp932
 set number
 
 set autoindent
-set expandtab tabstop=2 shiftwidth=2 softtabstop=2
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 set ambiwidth=double
 
@@ -110,6 +110,13 @@ autocmd FileType coffee setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 " cpp
 autocmd FileType cpp setl autoindent
 autocmd FileType cpp setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+" gradle
+" gradleのファイルタイプ識別用スクリプト
+au BufRead,BufNewFile *.gradle set filetype=groovy
+autocmd FileType gradle setl autoindent
+autocmd FileType gradle setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
 
 " backspace
 set backspace=indent,eol,start

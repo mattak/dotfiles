@@ -7,4 +7,13 @@ bist install 5333258
 # ashot
 bist install 5099636
 
+# csv2tsv
+bist install 5632946
+
+# tsv2csv
+bist install 5632948
+
+# adiff
+bist install 5640843
+
 bist rehash
