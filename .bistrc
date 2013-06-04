@@ -16,4 +16,7 @@ bist install 5632948
 # adiff
 bist install 5640843
 
+# cdiff
+bist install 5702701
+
 bist rehash
