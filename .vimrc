@@ -24,6 +24,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'kchmck/vim-coffee-script'
 """
 
 filetype plugin indent on
