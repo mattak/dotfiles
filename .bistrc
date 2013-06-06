@@ -20,4 +20,7 @@ bist install 5640843
 # cdiff
 bist install 5702701
 
+# clip
+bist install 5718877
+
 bist rehash
