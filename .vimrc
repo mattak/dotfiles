@@ -159,5 +159,8 @@ nmap <silent> ;  <C-w>p
 nnoremap <silent> QQ  :QuickRun
 nmap <silent> QS  :!touch index.rst; make html<CR>
 noremap <C-e> :<C-u>NERDTreeToggle<CR>
-"map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+" quickrun coffee
+let g:quickrun_config = {}
+let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}
 
