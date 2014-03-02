@@ -129,4 +129,8 @@ source $HOME/.profile
 # Execute
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/maruyama/.gvm/bin/gvm-init.sh" ]] && source "/Users/maruyama/.gvm/bin/gvm-init.sh"
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
+
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
