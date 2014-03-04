@@ -132,5 +132,5 @@ source $HOME/.profile
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
+export PATH="$PATH:$HOME/.anyenv/bin"
 eval "$(anyenv init -)"
