@@ -1,5 +1,5 @@
 #!/bin/sh
-DOTFILES=`ls -a | egrep '^\.' | egrep -v '^.$' | egrep -v '^..$' | egrep -v '^.git'` 
+DOTFILES=`ls -a | egrep '^\.' | egrep -v '^.$' | egrep -v '^..$' | egrep -v '^.git$'` 
 
 if [ "$1" = "r" ]; then
 	for dotfile in $DOTFILES
