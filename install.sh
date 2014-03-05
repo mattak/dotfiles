@@ -13,6 +13,8 @@ PWD=`pwd`
 
 for dotfile in $DOTFILES
 do
-	ln -Fs "$PWD/$dotfile" $HOME
+    if [ ! -e "$HOME/$dotfile" ]; then
+        echo ln -Fs "$PWD/$dotfile" $HOME
+        ln -Fs "$PWD/$dotfile" $HOME
+    fi
 done
-
