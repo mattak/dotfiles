@@ -9,7 +9,7 @@ if [ "$1" = "r" ]; then
 fi
 
 cd `dirname $0`
-PWD=`PWD`
+PWD=`pwd`
 
 for dotfile in $DOTFILES
 do
