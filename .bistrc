@@ -29,4 +29,7 @@ bist install 5718877
 # expect-android-update.sh
 bist install 9804107
 
+# docker-clean.sh
+bist install 9804492
+
 bist rehash
