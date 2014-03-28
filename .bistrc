@@ -8,6 +8,9 @@ bist install 5691039
 # ashot
 bist install 5099636
 
+# arec
+bist install 9804492
+
 # csv2tsv
 bist install 5632946
 
@@ -22,5 +25,8 @@ bist install 5702701
 
 # clip
 bist install 5718877
+
+# expect-android-update.sh
+bist install 9804107
 
 bist rehash
