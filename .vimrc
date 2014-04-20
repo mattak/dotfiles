@@ -101,8 +101,8 @@ autocmd FileType scss setl autoindent
 autocmd FileType scss setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " js
-autocmd FileType js setl autoindent
-autocmd FileType js setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType javascript setl autoindent
+autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " coffee
 autocmd FileType coffee setl autoindent
