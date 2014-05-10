@@ -32,4 +32,7 @@ bist install 9804107
 # docker-clean.sh
 bist install 9804492
 
+# lctee
+bist install 11206943
+
 bist rehash
