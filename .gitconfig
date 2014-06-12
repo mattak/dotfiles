@@ -17,3 +17,5 @@
 	d5 = diff HEAD~~~~~
 [push]
 	default = tracking
+[core]
+	editor = /usr/bin/vim
