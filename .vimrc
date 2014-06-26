@@ -14,6 +14,7 @@ NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'opsplorer'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'scrooloose/nerdtree'
@@ -23,7 +24,11 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'https://bitbucket.org/ns9tks/vim-l9'
+NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
+NeoBundle 'tfnico/vim-gradle'
 """
 
 filetype plugin indent on
@@ -115,7 +120,7 @@ autocmd FileType cpp setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
 " gradleのファイルタイプ識別用スクリプト
 au BufRead,BufNewFile *.gradle set filetype=groovy
 autocmd FileType gradle setl autoindent
-autocmd FileType gradle setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType gradle setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 
 " backspace
