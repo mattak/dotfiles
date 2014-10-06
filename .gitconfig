@@ -1,11 +1,13 @@
-[user]
-	name = mattak
-	email = mattak.me@gmail.com
+[core]
+	editor = /usr/bin/vim
+[include]
+	path = ~/.gitconfig.local
 [alias]
 	co = checkout
 	st = status
 	lp = log -p
 	oneline = log --pretty=oneline
+	logline = log --date=short --pretty='format:%C(yellow)%h %C(green)%cd %C(blue)%an%C(red)%d %C(reset)%s'
 	ranking = shortlog -s -n --no-merges
 	lg = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
 	ls = log --stat
@@ -15,7 +17,8 @@
 	d3 = diff HEAD~~~
 	d4 = diff HEAD~~~~
 	d5 = diff HEAD~~~~~
+	sup = submodule update
 [push]
 	default = tracking
-[core]
-	editor = /usr/bin/vim
+[branch "master"]
+	mergeoptions = --no-ff
