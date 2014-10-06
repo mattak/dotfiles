@@ -11,6 +11,9 @@ bist install 5099636
 # arec
 bist install 9804492
 
+# agif
+bist install 10335370
+
 # csv2tsv
 bist install 5632946
 
@@ -34,5 +37,14 @@ bist install 9804492
 
 # lctee
 bist install 11206943
+
+# notify
+bist install c7ba20665ffd8bbd8352
+
+# avd create
+bist install 550edd85cc14182d4bb3
+
+# avd delete
+bist install f05640bd559e5cb2e949
 
 bist rehash
