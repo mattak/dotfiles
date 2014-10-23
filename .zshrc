@@ -132,5 +132,11 @@ source $HOME/.profile
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
 # anyenv
+
 export PATH="$PATH:$HOME/.anyenv/bin"
 eval "$(anyenv init -)"
+
+# zsh local
+if [ -e $HOME/.zshrc.local ]; then
+    source $HOME/.zshrc.local
+fi
