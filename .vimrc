@@ -9,7 +9,6 @@ endif
 
 """my plugins
 NeoBundle 'akiomik/git-gutter-vim'
-NeoBundle 'AutoClose'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'opsplorer'
 NeoBundle 'mattn/emmet-vim'
@@ -29,6 +28,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-l9'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 NeoBundle 'tfnico/vim-gradle'
+NeoBundle 'mattn/emmet-vim'
 """
 
 filetype plugin indent on
