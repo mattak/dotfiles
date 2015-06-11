@@ -19,6 +19,7 @@
 	d4 = diff HEAD~~~~
 	d5 = diff HEAD~~~~~
 	sup = submodule update
+	pof = pull --ff origin master
 [push]
 	default = tracking
 [branch "master"]
