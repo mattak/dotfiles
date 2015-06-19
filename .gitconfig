@@ -19,7 +19,17 @@
 	d4 = diff HEAD~~~~
 	d5 = diff HEAD~~~~~
 	sup = submodule update
+	jira = log --date=short --no-merges --pretty=format:'|%h|%an|%ad|%s|'
 [push]
 	default = tracking
 [branch "master"]
 	mergeoptions = --no-ff
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[init]
+	templatedir = ~/.git_template
+[merge "mergepbx"]
+	name = XCode project file merger
+	driver = mergepbx %O %A %B

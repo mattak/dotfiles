@@ -67,7 +67,7 @@ fun_prompt() {
 }
 
 normal_prompt () {
-    PROMPT='%{${fg[blue]}%}[%n@%m] %(!.%.$) %{${reset_color}%} %#'
+    PROMPT='%{${fg[blue]}%}[%n@%m] %(!.%.$) %{${fg[gray]}%} %#'
 }
 
 normal_prompt
@@ -144,7 +144,7 @@ source $HOME/.profile
 
 # anyenv
 
-export PATH="$PATH:$HOME/.anyenv/bin"
+export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 # zsh local

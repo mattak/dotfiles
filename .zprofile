@@ -6,4 +6,3 @@ export PATH=$PATH:$HOME/.bist/bin
 
 # gvm
 source "$HOME/.gvm/bin/gvm-init.sh"
-
