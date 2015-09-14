@@ -95,6 +95,10 @@ autocmd FileType clojure setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType html setl autoindent
 autocmd FileType html setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
+" xml setting
+autocmd FileType xml setl autoindent
+autocmd FileType xml setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
 " css setting
 autocmd FileType css setl autoindent
 autocmd FileType css setl expandtab tabstop=4 shiftwidth=4 softtabstop=4
