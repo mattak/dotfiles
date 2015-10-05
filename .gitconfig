@@ -20,6 +20,7 @@
 	d5 = diff HEAD~~~~~
 	sup = submodule update
 	pof = pull --ff origin master
+	mfck = "!git --no-pager diff --diff-filter=ACMRX --name-only --no-color HEAD | egrep '\\.(t|p([lm]|sgi))$' | xargs -n 1 -P2 mf-dev-env perl -wc"
 [push]
 	default = tracking
 [branch "master"]
