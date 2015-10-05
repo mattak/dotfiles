@@ -21,7 +21,17 @@
 	sup = submodule update
 	pof = pull --ff origin master
 	mfck = "!git --no-pager diff --diff-filter=ACMRX --name-only --no-color HEAD | egrep '\\.(t|p([lm]|sgi))$' | xargs -n 1 -P2 mf-dev-env perl -wc"
+	jira = log --date=short --no-merges --pretty=format:'|%h|%an|%ad|%s|'
 [push]
 	default = tracking
 [branch "master"]
 	mergeoptions = --no-ff
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[init]
+	templatedir = ~/.git_template
+[merge "mergepbx"]
+	name = XCode project file merger
+	driver = mergepbx %O %A %B

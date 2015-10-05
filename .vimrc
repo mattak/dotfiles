@@ -9,7 +9,6 @@ endif
 
 """my plugins
 NeoBundle 'akiomik/git-gutter-vim'
-NeoBundle 'AutoClose'
 NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'opsplorer'
 NeoBundle 'mattn/emmet-vim'
@@ -31,6 +30,7 @@ NeoBundle 'https://bitbucket.org/ns9tks/vim-l9'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tfnico/vim-gradle'
+NeoBundle 'mattn/emmet-vim'
 """
 
 filetype plugin indent on
@@ -103,6 +103,10 @@ autocmd FileType clojure setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 " html setting
 autocmd FileType html setl autoindent
 autocmd FileType html setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
+" xml setting
+autocmd FileType xml setl autoindent
+autocmd FileType xml setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " css setting
 autocmd FileType css setl autoindent
