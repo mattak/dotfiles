@@ -24,13 +24,13 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-perl/vim-perl'
-NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-l9'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'tfnico/vim-gradle'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 """
 
 filetype plugin indent on
@@ -154,7 +154,7 @@ nnoremap <silent> QQ  :QuickRun
 nmap <silent> QS  :!touch index.rst; make html<CR>
 noremap <C-e> :<C-u>NERDTreeToggle<CR>
 
-" quickrun coffee
+" quickrun
 let g:quickrun_config = {}
 let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}
-
+let g:quickrun_config['c/ndk-build'] = { 'exec'    : '%c', 'command' : 'ndk-build', 'runner'  : 'vimproc' }
