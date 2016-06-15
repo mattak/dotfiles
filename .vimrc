@@ -9,9 +9,24 @@ endif
 
 """my plugins
 NeoBundle 'akiomik/git-gutter-vim'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'https://bitbucket.org/ns9tks/vim-l9'
+NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 NeoBundle 'jistr/vim-nerdtree-tabs'
-NeoBundle 'opsplorer'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'opsplorer'
+NeoBundleLazy 'OmniSharp/omnisharp-vim', {
+\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
+\   'build': {
+\     'windows' : 'msbuild server/OmniSharp.sln',
+\     'mac': 'xbuild server/OmniSharp.sln',
+\     'unix': 'xbuild server/OmniSharp.sln',
+\   },
+\ }
+NeoBundleLazy 'OrangeT/vim-csharp', { 'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] } }
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimfiler'
@@ -19,18 +34,13 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'therubymug/vim-pyte'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tfnico/vim-gradle'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-perl/vim-perl'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'https://bitbucket.org/ns9tks/vim-l9'
-NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'tfnico/vim-gradle'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'ctrlpvim/ctrlp.vim'
 """
 
 filetype plugin indent on
