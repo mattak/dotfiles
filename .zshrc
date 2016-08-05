@@ -27,6 +27,10 @@ colors
 ## move only directory name
 setopt auto_cd
 
+## zmv
+autoload -Uz zmv
+alias zmv='noglob zmv -W'
+
 ## cdr
 autoload -Uz is-at-least
 if is-at-least 4.3.11
