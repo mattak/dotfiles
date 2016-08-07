@@ -77,11 +77,6 @@ syntax on
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 "
-"" ctags
-"nnoremap <C-]> g<C-]>`
-"
-"" backspace
-"set backspace=indent,eol,start
 "
 "set list
 "set listchars=tab:»-,trail:.,extends:»,precedes:«,nbsp:%
