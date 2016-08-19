@@ -34,9 +34,9 @@
 "NeoBundle 'vim-perl/vim-perl'
 """"
 
-filetype plugin indent on
+"filetype plugin indent on
 
-syntax on
+"syntax on
 
 "" neocomplcache
 "let g:neocomplcache_enable_at_startup = 1
