@@ -8,4 +8,7 @@ augroup FileTypeDetect
   autocmd! BufNewFile,BufRead *.t  setfiletype perl
   autocmd! BufNewFile,BufRead *.pl setfiletype perl
   autocmd! BufNewFile,BufRead cpanfile setfiletype perl
+
+  autocmd! BufNewFile,BufRead *.html setfiletype html
+  autocmd! BufNewFile,BufRead *.js setfiletype javascript
 augroup END
