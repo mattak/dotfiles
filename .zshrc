@@ -1,19 +1,3 @@
-UNAME=`uname`
-if [ "Linux" = $UNAME ]; then
-  UNAME_UBUNTU=`uname -a | perl -ne 'print "$1" if /(Ubuntu)/;'`
-  if [ ${#UNAME_UBUNTU} -ne 0 ]; then
-    UNAME=$UNAME_UBUNTU
-  fi
-fi
-
-if [ "Ubuntu" != $UNAME ]; then
-    export LANG=ja_JP.UTF-8
-fi
-
-if [ "Darwin" = $UNAME ]; then
-    export LC_ALL=ja_JP.UTF-8 #for mac
-fi
-
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=100000
@@ -129,28 +113,9 @@ alias ll='ls -l'
 alias la='ls -a'
 alias vi='vim'
 
-# Funcs
-
-findgrep() {
-  folder=$1
-  shift 1
-  find $folder -type f | grep $@
-}
-
-findxgrep() {
-  folder=$1
-  shift 1
-  find $folder -type f | xargs grep $@
-}
-
 # PATHES
 
 source $HOME/.profile
-
-# Execute
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
 # anyenv
 
