@@ -104,11 +104,6 @@ precmd () {
 # Aliases
 
 alias sl='ls'
-if [ "Darwin" = $UNAME ]; then
-	alias ls='ls -G'
-else
-	alias ls='ls --color'
-fi
 alias ll='ls -l'
 alias la='ls -a'
 alias vi='vim'
