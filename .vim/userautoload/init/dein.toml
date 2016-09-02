@@ -39,3 +39,6 @@ repo = 'Shougo/unite-outline'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
