@@ -5,7 +5,7 @@ nmap <Space>u [unite]
 " keymap
 let g:unite_source_history_yank_enable =1
 nnoremap <silent> [unite]u :<C-u>Unite<Space>file<CR>
-nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
+nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<Space>-auto-preview<CR>
 nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<CR>
 nnoremap <silent> [unite]a :<C-u>UniteBookmarkAdd<CR>
 nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
