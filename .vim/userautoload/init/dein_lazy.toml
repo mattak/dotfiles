@@ -5,3 +5,11 @@ on_ft = ['toml']
 [[plugins]]
 repo  = 'tpope/vim-endwise'
 on_ft = ['ruby']
+
+[[plugins]]
+repo  = 'OmniSharp/omnisharp-vim'
+on_ft = ['csharp']
+
+[[plugins]]
+repo  = 'OrangeT/vim-csharp'
+on_ft = ['csharp']

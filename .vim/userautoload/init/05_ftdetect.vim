@@ -11,4 +11,6 @@ augroup FileTypeDetect
 
   autocmd! BufNewFile,BufRead *.html setfiletype html
   autocmd! BufNewFile,BufRead *.js setfiletype javascript
+
+  autocmd! BufNewFile,BufRead *.cs setfiletype csharp
 augroup END
