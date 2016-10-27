@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$2" == "" ]; then
+    _GIT_EDIT_FILE=$1
+    mv ${_GIT_EDIT_FILE} ${_GIT_EDIT_FILE}.tmp
+
+    _GIT_BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+
+    echo "${_GIT_BRANCH_NAME} ${_GIT_EDIT_TYPE}:" > ${_GIT_EDIT_FILE}
+    cat ${_GIT_EDIT_FILE}.tmp >> ${_GIT_EDIT_FILE}
+fi
+
