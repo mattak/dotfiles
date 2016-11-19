@@ -1,3 +1,4 @@
+PREVIOUS_EXIT_CODE=$?
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=100000
@@ -36,32 +37,8 @@ bindkey '^N' history-beginning-search-forward-end
 setopt prompt_subst
 #PROMPT='`whoami`@$HOST${WINDOW:+"[$WINDOW]"}%{$fg[blue]%}%#%{$reset_color%} '
 
-fun_prompt() {
-    PROMPT_NUM=`expr $RANDOM % 8`
-    if [ $PROMPT_NUM -eq 0 ]; then
-	PROMPT='(」・ω・)」'
-    elif [ $PROMPT_NUM -eq 1 ]; then
-	PROMPT='(^^;'
-    elif [ $PROMPT_NUM -eq 2 ]; then
-	PROMPT='( ´∀｀)σσ'
-    elif [ $PROMPT_NUM -eq 3 ]; then
-	PROMPT='(´ー｀)y~~'
-    elif [ $PROMPT_NUM -eq 4 ]; then
-	PROMPT='(｀・ω・´)'
-    elif [ $PROMPT_NUM -eq 5 ]; then
-	PROMPT='(´・ω・｀)'
-    elif [ $PROMPT_NUM -eq 6 ]; then
-	PROMPT='ｷﾀー(ﾟ∀ ﾟ)ー!'
-    elif [ $PROMPT_NUM -eq 7 ]; then
-	PROMPT='(*´ω｀*)'
-    else
-	PROMPT='(^^)'
-    fi
-    PROMPT="$PROMPT % "
-}
-
 normal_prompt () {
-    PROMPT='%{${fg[blue]}%}[%n@%m] %(!.%.$) %{${fg[gray]}%} %#'
+  PROMPT='%(?.%{$fg[green]%}.%{$fg[red]%})$ %{${reset_color}%}'
 }
 
 normal_prompt
@@ -99,8 +76,6 @@ precmd () {
     RPROMPT="%{$fg[white]%}%~%{$reset_color%}%{$color%}%1v%{$reset_color%}"
 }
 
-#RPROMPT="%{$fg[white]%}%~%{$fg[blue]%} %1(v|%F{green}%1v%f|)"
-
 # Aliases
 
 alias sl='ls'
@@ -110,7 +85,9 @@ alias vi='vim'
 
 # PATHES
 
-source $HOME/.profile
+if [ -e $HOME/.profile ]; then
+  source $HOME/.profile
+fi
 
 # anyenv
 
