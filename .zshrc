@@ -32,6 +32,13 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey '^P' history-beginning-search-backward-end
 bindkey '^N' history-beginning-search-forward-end
 
+## history
+setopt hist_ignore_all_dups # ignore same command
+setopt hist_ignore_space    # ignore command start with space
+setopt hist_reduce_blanks   # remove space inside of sentence
+setopt hist_save_nodups     # duplicate command
+setopt share_history        # share history
+
 ## PROMPT
 setopt prompt_subst
 #PROMPT='`whoami`@$HOST${WINDOW:+"[$WINDOW]"}%{$fg[blue]%}%#%{$reset_color%} '
@@ -118,6 +125,7 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 # zsh local
+
 if [ -e $HOME/.zshrc.local ]; then
     source $HOME/.zshrc.local
 fi
