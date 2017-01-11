@@ -5,3 +5,6 @@ set number
 hi SpecialKey ctermfg=darkmagenta
 set list listchars=tab:¦_
 
+" check spell
+set spell
+set spelllang=en,cjk 

@@ -26,9 +26,6 @@ repo = 'scrooloose/nerdtree'
 repo = 'jistr/vim-nerdtree-tabs'
 
 [[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
 repo = 'thinca/vim-quickrun'
 
 [[plugins]]
