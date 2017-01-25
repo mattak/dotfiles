@@ -80,7 +80,7 @@ precmd () {
 
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]=" $vcs_info_msg_0_"
 
-    RPROMPT="%{$fg[white]%}%~%{$reset_color%}%{$color%}%1v%{$reset_color%}"
+    RPROMPT="%{$fg[gray]%}%~%{$reset_color%}%{$color%}%1v%{$reset_color%}"
 }
 
 # Aliases
