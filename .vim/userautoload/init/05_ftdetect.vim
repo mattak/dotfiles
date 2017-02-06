@@ -13,4 +13,6 @@ augroup FileTypeDetect
   autocmd! BufNewFile,BufRead *.js setfiletype javascript
 
   autocmd! BufNewFile,BufRead *.cs setfiletype csharp
+
+  autocmd! BufNewFile,BufRead *.conf setfiletype nginx
 augroup END
