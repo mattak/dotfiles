@@ -53,7 +53,7 @@ normal_prompt
 # git setting
 
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:*' formats '%b'
 zstyle ':vcs_info:*' actionformats '[%b][%a]'
 
 precmd () {
@@ -78,9 +78,11 @@ precmd () {
         color=${fg[red]}
     fi
 
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]=" $vcs_info_msg_0_"
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+    psvar[2]=$(whoami)
+    psvar[3]=$(hostname)
 
-    RPROMPT="%F{008%}%~%{$reset_color%}%{$color%}%1v%{$reset_color%}"
+    RPROMPT="%F{008%}%~%{$reset_color%} [%{$color%}%1v%{$reset_color%}|%2v|%3v]"
 }
 
 # Aliases
