@@ -22,6 +22,7 @@
 	pof = pull --ff origin master
 	mfck = "!git --no-pager diff --diff-filter=ACMRX --name-only --no-color HEAD | egrep '\\.(t|p([lm]|sgi))$' | xargs -n 1 -P2 mf-dev-env perl -wc"
 	jira = log --date=short --no-merges --pretty=format:'|%h|%an|%ad|%s|'
+	fetch-clean = !git fetch -p && git branch --merged | grep -v \\* | xargs -I% git branch -d %
 [push]
 	default = tracking
 [branch "master"]
