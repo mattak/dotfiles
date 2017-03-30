@@ -17,3 +17,7 @@ on_ft = ['csharp']
 [[plugins]]
 repo  = 'vim-scripts/nginx.vim'
 on_ft = ['nginx']
+
+[[plugins]]
+repo  = 'kchmck/vim-coffee-script'
+on_ft = ['coffee']
