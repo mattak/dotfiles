@@ -21,3 +21,7 @@ on_ft = ['nginx']
 [[plugins]]
 repo  = 'kchmck/vim-coffee-script'
 on_ft = ['coffee']
+
+[[plugins]]
+repo='tpope/vim-surround'
+on_i = 1
