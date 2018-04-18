@@ -36,3 +36,5 @@
 [merge "mergepbx"]
 	name = XCode project file merger
 	driver = mergepbx %O %A %B
+[color "diff"]
+	meta = black bold
