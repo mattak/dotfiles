@@ -38,3 +38,6 @@
 	driver = mergepbx %O %A %B
 [color "diff"]
 	meta = black bold
+[user]
+	email = mattak.me@gmail.com
+	name = mattak
