@@ -1,22 +1,25 @@
 #!/bin/sh
 
-
 should_fail=0
-for directory in $(git status -s | egrep '^A.*.meta$' | awk '{print $2}' | sed 's|.meta$||g' | xargs -n1 -I{} find {} -empty 2> /dev/null)
+
+# remove all git added empty meta files & directory
+for directory in $(git status -s | egrep '^A.*.meta$' | awk '{print $2}' | sed 's|.meta$||g' | xargs -n1 -I{} find "{}" -empty 2> /dev/null)
 do
-	echo git reset "${directory}.meta"
 	git reset "${directory}.meta"
+	rmdir "$directory"
+	rm "${directory}.meta"
 	should_fail=1
 done
 
-if [ $should_fail -eq 1 ]; then
-	exit $should_fail
-fi
-
-for directory in $(git status -s | egrep '.meta$' | awk '{print $2}' | sed 's|.meta$||g' | xargs -n1 -I{} find {} -empty 2> /dev/null)
+# remove all unstaged empty meta files & directory
+for directory in $(git status -s | egrep '.meta$' | awk '{print $2}' | sed 's|.meta$||g' | xargs -n1 -I{} find "{}" -empty 2> /dev/null)
 do
-	echo rmdir "$directory"
 	rmdir "$directory"
 	rm "${directory}.meta"
 done
+
+if [ $should_fail -eq 1 ]; then
+	echo "ERROR: git added empty meta files & directory removed. please re-commit"
+	exit $should_fail
+fi
 
