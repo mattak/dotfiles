@@ -19,7 +19,7 @@ do
 done
 
 if [ $should_fail -eq 1 ]; then
-	echo "ERROR: git added empty meta files & directory removed. please re-commit"
+	echo "ERROR: git added empty Unity meta files & directory removed. please redo the commit"
 	exit $should_fail
 fi
 
