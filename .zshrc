@@ -71,9 +71,9 @@ precmd () {
     elif [[ -n `echo "$st" | grep "^# Changes not staged"` ]]; then
         color=${fg[yellow]}
     elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
-        color=${fg[blue]}
+        color=${fg[cyan]}
     elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
-        color=${fg[blue]}
+        color=${fg[cyan]}
     else
         color=${fg[red]}
     fi
