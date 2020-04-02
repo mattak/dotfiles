@@ -81,8 +81,9 @@ precmd () {
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
     psvar[2]=$(whoami)
     psvar[3]=$(hostname)
+    psvar[4]=$(date +%H:%M:%S)
 
-    RPROMPT="%F{008%}%~%{$reset_color%} [%{$color%}%1v%{$reset_color%}|%2v|%3v]"
+    RPROMPT="%F{008%}%~%{$reset_color%} [%{$color%}%1v%{$reset_color%}|%2v|%3v|%4v]"
 }
 
 # Aliases
