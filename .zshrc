@@ -86,26 +86,6 @@ precmd () {
     RPROMPT="%F{008%}%~%{$reset_color%} [%{$color%}%1v%{$reset_color%}|%2v|%3v|%4v]"
 }
 
-# Aliases
-
-alias sl='ls'
-alias ll='ls -l'
-alias la='ls -a'
-alias vi='vim'
-
-# PATHES
-
-if [ -e $HOME/.profile ]; then
-  source $HOME/.profile
-fi
-
-# anyenv
-
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-
 # zsh local
 
-if [ -e $HOME/.zshrc.local ]; then
-    source $HOME/.zshrc.local
-fi
+[[ -s $HOME/.zshrc.local ]] && source $HOME/.zshrc.local

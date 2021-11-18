@@ -1,3 +1,8 @@
+alias sl='ls'
+alias ll='ls -l'
+alias la='ls -a'
+alias vi='vim'
+
 if type "nvim" > /dev/null; then
   alias vim='nvim'
 fi
