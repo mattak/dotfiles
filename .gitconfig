@@ -6,6 +6,8 @@
 [alias]
 	co = checkout
 	st = status
+	sw = switch
+	rs = restore
 	lp = log -p
 	oneline = log --pretty=oneline
 	logline = log --date=short --pretty='format:%C(yellow)%h %C(green)%cd %C(blue)%an%C(red)%d %C(reset)%s'
@@ -33,6 +35,7 @@
 	smudge = git media smudge %f
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = main
 [merge "mergepbx"]
 	name = XCode project file merger
 	driver = mergepbx %O %A %B
