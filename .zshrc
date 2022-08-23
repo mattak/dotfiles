@@ -88,4 +88,6 @@ precmd () {
 
 # zsh local
 
+[[ -s $HOME/.profile ]] && source $HOME/.profile
 [[ -s $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+
