@@ -4,9 +4,9 @@ if [ "$2" == "" ]; then
     _GIT_EDIT_FILE=$1
     mv ${_GIT_EDIT_FILE} ${_GIT_EDIT_FILE}.tmp
 
-    _GIT_BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+    _GIT_BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD | perl -pne 's|^\w+/(\d+)_?.*$|#\1|g')
 
-    echo ":seedling: ${_GIT_BRANCH_NAME} Create something " > ${_GIT_EDIT_FILE}
+    echo ":seedling: ${_GIT_BRANCH_NAME} " > ${_GIT_EDIT_FILE}
     cat $HOME/.gitmessage >> ${_GIT_EDIT_FILE}
     cat ${_GIT_EDIT_FILE}.tmp >> ${_GIT_EDIT_FILE}
 fi
