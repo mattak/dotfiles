@@ -4,7 +4,7 @@ DOTFILES=$(ls -a | egrep '^\.' | egrep -v '^.$' | egrep -v '^..$' | egrep -v '^.
 if [ "$1" = "r" ]; then
   for dotfile in $DOTFILES
   do
-    rm -f $HOME/$dotfile
+    unlink $HOME/$dotfile
   done
 fi
 

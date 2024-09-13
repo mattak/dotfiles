@@ -90,4 +90,6 @@ precmd () {
 
 [[ -s $HOME/.profile ]] && source $HOME/.profile
 [[ -s $HOME/.zshrc.local ]] && source $HOME/.zshrc.local
+[[ -s "$HOME/.zshrcs/dart.zshrc" ]] && source "$HOME/.zshrcs/dart.zshrc"
+[[ -s "$HOME/.zshrcs/conda.zshrc" ]] && source "$HOME/.zshrcs/conda.zshrc"
 
