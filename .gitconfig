@@ -4,7 +4,6 @@
 [include]
 	path = ~/.gitconfig.local
 [alias]
-	co = checkout
 	st = status
 	sw = switch
 	rs = restore
@@ -15,6 +14,8 @@
 	lg = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
 	ls = log --stat
 	dm = diff master
+	dc = diff --cached
+	cmv = commit -v
 	d1 = diff HEAD~
 	d2 = diff HEAD~~
 	d3 = diff HEAD~~~
@@ -23,7 +24,7 @@
 	sup = submodule update
 	pof = pull --ff origin master
 	mfck = "!git --no-pager diff --diff-filter=ACMRX --name-only --no-color HEAD | egrep '\\.(t|p([lm]|sgi))$' | xargs -n 1 -P2 mf-dev-env perl -wc"
-	jira = log --date=short --no-merges --pretty=format:'|%h|%an|%ad|%s|'
+	graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
 	fetch-clean = !git fetch -p && git branch --merged | grep -v \\* | xargs -I% git branch -d %
 [push]
 	default = tracking
