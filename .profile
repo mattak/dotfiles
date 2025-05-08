@@ -1,8 +1,7 @@
 # alias
 source "$HOME/.profiles/alias.profile"
 
-# path
-source $HOME/.profiles/path/home.profile
+# path source $HOME/.profiles/path/home.profile
 source $HOME/.profiles/path/ccache.profile
 source $HOME/.profiles/path/android.profile
 source $HOME/.profiles/path/java.profile
@@ -11,6 +10,8 @@ source $HOME/.profiles/path/dotnet.profile
 source $HOME/.profiles/path/rust.profile
 source $HOME/.profiles/path/flutter.profile
 source $HOME/.profiles/path/deno.profile
+source $HOME/.profiles/path/freecad.profile
+source $HOME/.profiles/path/bun.profile
 
 # eval
 source "$HOME/.profiles/eval/brew.profile"
