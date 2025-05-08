@@ -1,5 +1,5 @@
 [core]
-	editor = /usr/bin/vim
+	editor = /usr/bin/env nvim
 	excludesfile = ~/.gitignore.global
 [include]
 	path = ~/.gitconfig.local
@@ -30,6 +30,8 @@
 	fetch-clean = !git fetch -p && git branch --merged | grep -v \\* | xargs -I% git branch -d %
 [push]
 	default = tracking
+	autoSetupRemote = true
+	followTags = true
 [branch "master"]
 	mergeoptions = --no-ff
 [filter "media"]
@@ -47,3 +49,25 @@
 [user]
 	email = mattak.me@gmail.com
 	name = mattak
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[commit]
+	verbose = true
+[rerere]
+	enabled = true
+	autoupdate = true
