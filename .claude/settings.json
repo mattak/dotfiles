@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*=*)",
+      "Bash(./script/:*)",
+      "Bash(bun:*)",
+      "Bash(cat:*)",
+      "Bash(cd:*)",
+      "Bash(echo:*)",
+      "Bash(find:*)",
+      "Bash(flutter:*)",
+      "Bash(gh repo create:*)",
+      "Bash(gh:*)",
+      "Bash(git commit:*)",
+      "Bash(git:*)",
+      "Bash(grep:*)",
+      "Bash(lipo:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(rg:*)",
+      "Bash(rm /tmp/:*)",
+      "Bash(rmdir:*)",
+      "Bash(sed:*)",
+      "Bash(spectral:*)",
+      "Bash(touch:*)",
+      "Edit(*)",
+      "Read(*)",
+      "Write(*)",
+      "WebFetch"
+    ],
+    "deny": [
+      "Bash(npm run test:integration:*)"
+    ]
+  }
+}
