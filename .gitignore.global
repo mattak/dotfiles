@@ -5,3 +5,5 @@ tags
 
 .idea/
 yarn-error.log
+
+.tmp/

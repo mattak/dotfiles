@@ -49,8 +49,6 @@
 [user]
 	email = mattak.me@gmail.com
 	name = mattak
-[column]
-	ui = auto
 [branch]
 	sort = -committerdate
 [tag]
