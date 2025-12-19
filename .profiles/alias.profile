@@ -11,5 +11,3 @@ if type "alias-git-cd" > /dev/null; then
   alias git-cd='source alias-git-cd'
 fi
 
-alias claude="$HOME/.claude/local/claude"
-alias cc="$HOME/.claude/local/claude --dangerously-skip-permissions"
