@@ -86,6 +86,19 @@ precmd () {
     RPROMPT="%F{008%}%~%{$reset_color%} [%{$color%}%1v%{$reset_color%}|%2v|%3v|%4v]"
 }
 
+# Ghostty tab title: git root directory name
+set_ghostty_tab_title() {
+    local git_root
+    git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+    if [[ -n "$git_root" ]]; then
+        print -Pn "\e]2;${git_root:t}\a"
+    else
+        print -Pn "\e]2;%1~\a"
+    fi
+}
+add-zsh-hook precmd set_ghostty_tab_title
+add-zsh-hook chpwd set_ghostty_tab_title
+
 # zsh local
 
 [[ -s $HOME/.profile ]] && source $HOME/.profile
