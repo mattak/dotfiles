@@ -37,8 +37,9 @@
       "Bash(git push:*)"
     ]
   },
+  "alwaysThinkingEnabled": false,
+  "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754261602852
-  },
-  "alwaysThinkingEnabled": false
+  }
 }
