@@ -7,7 +7,6 @@ source $HOME/.profiles/path/android.profile
 source $HOME/.profiles/path/java.profile
 source $HOME/.profiles/path/go.profile
 source $HOME/.profiles/path/dotnet.profile
-source $HOME/.profiles/path/rust.profile
 source $HOME/.profiles/path/flutter.profile
 source $HOME/.profiles/path/deno.profile
 source $HOME/.profiles/path/freecad.profile
