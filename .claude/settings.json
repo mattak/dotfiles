@@ -37,9 +37,26 @@
       "Bash(git push:*)"
     ]
   },
+  "extraKnownMarketplaces": {
+    "cc-secretary": {
+      "source": {
+        "source": "github",
+        "repo": "Shin-sibainu/cc-secretary"
+      }
+    },
+    "cc-company": {
+      "source": {
+        "source": "github",
+        "repo": "Shin-sibainu/cc-company"
+      }
+    }
+  },
   "alwaysThinkingEnabled": false,
   "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754261602852
+  },
+  "enabledPlugins": {
+    "company@cc-company": true
   }
 }

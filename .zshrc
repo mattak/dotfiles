@@ -106,3 +106,5 @@ add-zsh-hook chpwd set_ghostty_tab_title
 [[ -s "$HOME/.zshrcs/dart.zshrc" ]] && source "$HOME/.zshrcs/dart.zshrc"
 [[ -s "$HOME/.zshrcs/gcloud.zshrc" ]] && source "$HOME/.zshrcs/gcloud.zshrc"
 
+# OpenClaw Completion
+[[ -s "$HOME/.openclaw/completions/openclaw.zsh" ]] && source "$HOME/.openclaw/completions/openclaw.zsh"
